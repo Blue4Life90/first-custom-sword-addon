@@ -1,6 +1,75 @@
 # How to Run and Test the AverySword Add-on
 
-## Method 1: Development Environment (For Add-on Creators)
+## Method 1: Build the Add-on Using the Development Environment
+
+This requires installing Node.js, but it's not as complicated as it might sound:
+
+1. **Install Node.js**: 
+   - Visit nodejs.org and download the "LTS" (Long Term Support) version
+   - Run the installer with default settings
+   - This gives you both Node.js and npm (Node Package Manager)
+
+2. **Use the terminal/command prompt to build the add-on**:
+   - Open a command prompt or terminal
+   - Navigate to the folder where you extracted the AverySword project
+   - Run these commands one by one:
+     ```
+     npm install
+     ```
+     (wait for this to complete, it might take a minute)
+     ```
+     npm run mcaddon
+     ```
+
+3. **Find the built add-on**:
+   - After running these commands, look in the `dist/packages` folder
+   - You should find an `AverySword.mcaddon` file
+   - This is the file you can double-click to install in Minecraft
+
+## Method 2: Create the Add-on Package Manually
+
+If you prefer not to install Node.js, you can manually create the add-on package:
+
+1. **Create the proper folder structure**:
+   - Create a new folder called "AverySword"
+   - Inside it, create two folders: "BP" and "RP"
+   
+2. **Copy the behavior pack files**:
+   - Copy everything from the `behavior_packs/aver_as` folder to your "BP" folder
+   - Make sure to preserve the subfolder structure (items, recipes, etc.)
+
+3. **Copy the resource pack files**:
+   - Copy everything from the `resource_packs/aver_as` folder to your "RP" folder
+   - Again, preserve all subfolders
+
+4. **Create a ZIP file**:
+   - Select both the BP and RP folders
+   - Create a ZIP file containing them (right-click → Send to → Compressed folder in Windows)
+   - Rename the .zip file to have the .mcaddon extension instead (e.g., "AverySword.mcaddon")
+
+5. **Install in Minecraft**:
+   - Double-click the .mcaddon file to install it
+
+## Method 3: Use the Files Directly (Advanced)
+
+If you're on Windows and familiar with Minecraft's folder structure, you can place the add-on files directly in Minecraft's development folders:
+
+1. **Locate Minecraft's development folders**:
+   - Press Win+R to open the Run dialog
+   - Type `%localappdata%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang` and press Enter
+   
+2. **Copy the files**:
+   - Copy the `behavior_packs/aver_as` folder to the `development_behavior_packs` folder
+   - Copy the `resource_packs/aver_as` folder to the `development_resource_packs` folder
+
+3. **Launch Minecraft and create a world with the add-on**:
+   - In Minecraft, the packs should appear in the development sections of behavior and resource packs
+
+A tutorial project like this is designed as a learning experience - part of that learning is understanding how to build and package add-ons. Think of it like a cooking recipe that teaches you how to make the dish from scratch rather than just giving you pre-made food.
+
+Once you've built the add-on once, you'll have the .mcaddon file that you can keep and install anytime.
+
+## Method 1 Elaboration: Development Environment (For Add-on Creators)
 
 The development environment approach uses Node.js as the foundation for a modern development workflow. This approach offers powerful tools that make creating and updating add-ons much easier in the long run, especially for larger projects.
 

@@ -1,0 +1,40 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "AverySword",
+    "description": "Custom sword",
+    "uuid": "65904843-9d55-4705-845f-5398f0aee2e1",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      60
+    ]
+  },
+  "modules": [
+    {
+      "description": "Add-on Pack Resources",
+      "type": "resources",
+      "uuid": "601c9e39-2219-4afc-9c76-a7d44609f5a3",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "7e75417d-0cf5-4747-8da6-d42f9d1bd7a0",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}
